@@ -43,7 +43,7 @@ h2 span {
   -webkit-background-clip: text; /* webkit browsers */
   -webkit-text-fill-color: transparent; /* webkit browsers */
   background-clip: text;
-  text-fill-color: transparent;
+
   &::selection {
     background: #fec260;
     -webkit-text-fill-color: black;
