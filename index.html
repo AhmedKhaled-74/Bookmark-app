@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <title>Bookmark App</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="warrper pt-5">
+        <div class="container">
+          <h1 class="text-center mb-5"><span>Bookmarker</span></h1>
+          <div class="dots-line pt-3 w-100"></div>
+          <h2 class="text-center my-4">
+            <span>
+              <i class="fa fa-bookmark" aria-hidden="true"></i> Bookmark your
+              favorite sites
+              <i class="fa fa-bookmark" aria-hidden="true"></i>
+            </span>
+          </h2>
+          <form id="cta">
+            <label
+              for="siteName"
+              class="input-heading fw-semibold mb-2 d-flex gap-3 align-items-center mt-4"
+            >
+              <i class="fa-solid fa-book-bookmark"></i>
+              Site Name</label
+            >
+            <div class="input-box">
+              <input
+                type="text"
+                id="siteName"
+                placeholder="Bookmark Name"
+                class="d-block w-100 form-control"
+              />
+              <p
+                id="siteNameFeedback"
+                class="text-danger mt-3 fst-italic fw-semibold"
+              ></p>
+              <div class="checking">
+                <i class="fa-solid fa-exclamation d-none"></i>
+                <i class="fa-solid fa-check d-none"></i>
+              </div>
+            </div>
+            <label
+              for="siteUrl"
+              class="input-heading fw-semibold mb-2 d-flex gap-3 align-items-center mt-4"
+            >
+              <i class="fa-solid fa-link"></i> Site URL</label
+            >
+            <div class="input-box">
+              <input
+                type="text"
+                id="siteUrl"
+                placeholder="Website URL"
+                class="d-block w-100 form-control"
+              />
+              <p
+                id="siteUrlFeedback"
+                class="text-danger mt-3 fst-italic fw-semibold"
+              ></p>
+              <div class="checking">
+                <i class="fa-solid fa-exclamation d-none"></i>
+                <i class="fa-solid fa-check d-none"></i>
+              </div>
+            </div>
+            <button id="btnSub" class="submit-btn d-block mx-auto mt-4 btn">
+              Submit
+            </button>
+          </form>
+          <div class="dots-line pt-3 w-100"></div>
+          <table class="table mt-3 text-center">
+            <thead>
+              <th>Index</th>
+              <th>Logo</th>
+              <th>Website Name</th>
+              <th>Visit</th>
+              <th>Delete</th>
+            </thead>
+            <tbody id="tBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Button trigger modal -->
+
+      <!-- Modal -->
+      <aside
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="exampleModalLabel">
+                Are you Sure !?
+              </h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">You want to delete this Bookmark ?</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary w-25"
+                data-bs-dismiss="modal"
+              >
+                No
+              </button>
+              <button
+                id="deleteBtnAction"
+                type="button"
+                class="btn btn-danger w-25"
+                data-bs-dismiss="modal"
+              >
+                Yes
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer
+      class="text-center py-3 d-flex align-items-center justify-content-center"
+    >
+      <p class="mb-0">
+        CopyRight 2023 &copy; By <strong> Ahmed Khaled </strong> All Rights
+        Reserved
+      </p>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

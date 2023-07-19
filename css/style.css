@@ -1,0 +1,117 @@
+::selection {
+  background-color: #fec260;
+}
+.warrper,
+main,
+body {
+  background-color: #f7ecde;
+  font-family: "PT Sans Caption", sans-serif;
+  min-height: 100vb;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: "Pacifico", cursive;
+}
+h1 span {
+  position: relative;
+  isolation: isolate;
+  &:hover::after {
+    grid-template-rows: 50px;
+    background: linear-gradient(to bottom, #f7ecde, #fec260);
+  }
+}
+h1 span::after {
+  content: "";
+  background: linear-gradient(to bottom, #f7ecde, #fec260);
+  display: grid;
+  grid-template-rows: 20px;
+  width: 100%;
+  transition: all 0.5s;
+  position: absolute;
+  bottom: 20%;
+  z-index: -1;
+  left: 0;
+}
+h2 {
+  font-family: "Righteous", cursive;
+  font-size: 25px;
+  font-weight: 500;
+}
+h2 span {
+  background: linear-gradient(to right, #3ea55b, #b2ac49);
+  -webkit-background-clip: text; /* webkit browsers */
+  -webkit-text-fill-color: transparent; /* webkit browsers */
+  background-clip: text;
+  text-fill-color: transparent;
+  &::selection {
+    background: #fec260;
+    -webkit-text-fill-color: black;
+  }
+}
+.dots-line {
+  border-bottom: 2px dotted #000000ab;
+}
+
+.form-control:focus {
+  border-color: rgb(254, 193, 96);
+  box-shadow: 0 0 0 0.25rem #fec160a9;
+  transition: all 0.25s;
+}
+input::placeholder {
+  opacity: 70% !important;
+}
+.input-box {
+  position: relative;
+}
+.checking {
+  position: absolute;
+  top: 0;
+  right: 2%;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  border: 0px solid white;
+  transform: translateY(30%);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submit-btn {
+  background-color: #bb4120;
+  color: #fff;
+  padding: 8px 56px;
+  &:hover {
+    background-color: #a4391c;
+    color: #fff;
+  }
+}
+.data {
+  @media (max-width: 50em) {
+    min-height: 32px;
+  }
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  font-size: 24px;
+  @media (max-width: 50em) {
+    font-size: 18px;
+  }
+}
+.btn {
+  @media (max-width: 50em) {
+    font-size: 12px;
+  }
+}
+#siteNameFeedback {
+  font-size: 16px;
+  letter-spacing: 0.25px;
+}
+footer {
+  background-color: #f7ecde;
+  font-size: 12px;
+}
